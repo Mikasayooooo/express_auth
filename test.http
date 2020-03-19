@@ -1,0 +1,24 @@
+@url = http://localhost:4005/api
+@json = Content-Type: application/json
+###
+GET {{url}}/users
+###注册
+POST  {{url}}/register 
+{{json}}
+
+{
+    "username":"wzy",
+    "password":"123456" 
+}
+
+###登录
+post {{url}}/login
+{{json}}
+
+{
+    "username":"wzy",
+    "password":"123456"
+}
+###个人信息
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNzJlMzU1ZTkyNGI1MTZhMGY1Y2M2NCIsImlhdCI6MTU4NDU5MTg1MX0.ZR8IbU9WP4DMnaNk6TkKrihNwPnqNnr58IbyM7e2rBc
